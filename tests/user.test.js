@@ -68,7 +68,7 @@ const userErrorPassword2Alpkabets = {
   password: "ad",
 };
 
-describe("User", async () => {
+describe("User", () => {
   
   it("สามารถเพิ่มUserได้", async () => {
     let error = null;
@@ -79,7 +79,7 @@ describe("User", async () => {
       error = e;
     }
     expect(error).toBeNull();
-  });
+  })
 
   it("ไมสามารถเพิ่มUserได้ เพราะ firstname:null ", async () => {
     let error = null;
@@ -90,7 +90,7 @@ describe("User", async () => {
       error = e;
     }
     expect(error).not.toBeNull();
-  });
+  })
   it("ไมสามารถเพิ่มUserได้ เพราะ lastname:null ", async () => {
     let error = null;
     try {
@@ -100,7 +100,7 @@ describe("User", async () => {
       error = e;
     }
     expect(error).not.toBeNull();
-  });
+  })
   it("ไมสามารถเพิ่มUserได้ เพราะ username:null ", async () => {
     let error = null;
     try {
@@ -110,7 +110,7 @@ describe("User", async () => {
       error = e;
     }
     expect(error).not.toBeNull();
-  });
+  })
   it("ไมสามารถเพิ่มUserได้ เพราะ password:null ", async () => {
     let error = null;
     try {
@@ -120,7 +120,7 @@ describe("User", async () => {
       error = e;
     }
     expect(error).not.toBeNull();
-  });
+  })
 
   it("ไมสามารถเพิ่มUserได้ เพราะ Firstname:  2ตัว", async () => {
     let error = null;
@@ -131,7 +131,7 @@ describe("User", async () => {
       error = e;
     }
     expect(error).not.toBeNull();
-  });
+  })
   it("ไมสามารถเพิ่มUserได้ เพราะ Lastname:  2ตัว", async () => {
     let error = null;
     try {
@@ -141,7 +141,7 @@ describe("User", async () => {
       error = e;
     }
     expect(error).not.toBeNull();
-  });
+  })
   it("ไมสามารถเพิ่มUserได้ เพราะ Username:  2ตัว", async () => {
     let error = null;
     try {
@@ -151,7 +151,7 @@ describe("User", async () => {
       error = e;
     }
     expect(error).not.toBeNull();
-  });
+  })
   it("ไมสามารถเพิ่มUserได้ เพราะ Password:  2ตัว", async () => {
     let error = null;
     try {
@@ -161,7 +161,7 @@ describe("User", async () => {
       error = e;
     }
     expect(error).not.toBeNull();
-  });
+  })
 
   it("ไมสามารถเพิ่มUserได้ เพราะ username:ต้องไม่ซ้ำกัน", async () => {
     let error = null;
@@ -174,5 +174,5 @@ describe("User", async () => {
       error = e;
     }
     expect(error).not.toBeNull();
-  });
+  })
 });
